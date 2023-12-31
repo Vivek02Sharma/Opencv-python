@@ -1,0 +1,16 @@
+import cv2
+import matplotlib.pyplot as plt
+import random
+
+
+image = cv2.imread("img.jpg", -1)
+print(image.shape)  # it will show the image shape
+
+ coloring each pixel with random colors
+ for i in range(image.shape[0]):
+     for j in range(image.shape[1]):
+         image[i,j] = [random.randint(0,255),random.randint(0,255),random.randint(0,255)]
+
+plt.imshow(image)
+plt.waitforbuttonpress()
+plt.close("all")
