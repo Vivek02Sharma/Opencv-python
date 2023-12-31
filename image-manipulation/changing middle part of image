@@ -1,0 +1,16 @@
+import cv2
+import matplotlib.pyplot as plt
+import random
+
+
+image = cv2.imread("img.jpg", -1)
+print(image.shape)  # it will show the image shape
+
+# changing the color of the each pixel in the middle of the image
+for i in range(700,2700):
+    for j in range(500,2000):
+        image[i,j] = [random.randint(0,255),random.randint(0,255),random.randint(0,255)]
+
+plt.imshow(image)
+plt.waitforbuttonpress()
+plt.close("all")
