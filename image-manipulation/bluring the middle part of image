@@ -1,0 +1,15 @@
+import cv2
+import matplotlib.pyplot as plt
+import random
+
+
+image = cv2.imread("img.jpg", -1)
+print(image.shape)  # it will show the image shape
+
+imgpxcopy = image[700:2700,500:2000]
+imgpxcopy = cv2.GaussianBlur(imgpxcopy,(15,15),0)
+image[700:2700,500:2000] = imgpxcopy
+
+plt.imshow(image)
+plt.waitforbuttonpress()
+plt.close("all")
