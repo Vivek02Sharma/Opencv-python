@@ -8,7 +8,7 @@ You can install `opencv-python` using the following pip command:
 
 ```bash
 pip install opencv-python
-
+```
 ## Key Functions and Concepts in OpenCV
 
 1.cv2.imread(): Loads an image from a file.
